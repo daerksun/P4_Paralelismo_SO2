@@ -2,8 +2,8 @@
 
 ## Dream Team
 
-Iván Melchor Santiago
-José Antonio Cortés Olmos
-Edgar Hernández Millán
-Karen Iveth Plata Hernández 
-Luis Enrique Contreras Vázquez
+-Iván Melchor Santiago
+-José Antonio Cortés Olmos
+-Edgar Hernández Millán
+-Karen Iveth Plata Hernández 
+-Luis Enrique Contreras Vázquez
