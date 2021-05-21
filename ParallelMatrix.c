@@ -176,3 +176,60 @@ Output: EXIT_FAILURE; EXIT_SUCCESS*/
 	}
 	return EXIT_SUCCESS;
 }
+
+int matrixMax(long double** result, long double* A, int sizeMat)
+/*Get the maximum value of the matrix A
+Input:	pointer to save the result
+	pointer to matrix A
+	size of the square matrices
+Output: EXIT_FAILURE; EXIT_SUCCESS*/
+{
+	int element, totalElem;
+	long double max;
+	
+	if(!*result || !A )
+	{
+		printf("Error in a matrix pointer\n");
+		return EXIT_FAILURE;
+	}
+	
+	totalElem = sizeMat * sizeMat;
+	max = 0;
+
+	for(element = 0; element < totalElem; element++)
+	{
+		if (*(A + element) > max)	
+			max = *(A + element);
+	}
+	*(*result) = max;
+	return EXIT_SUCCESS;
+}
+
+int ompParallelmatrixMax(long double** result, long double* A, int sizeMat)
+/*Get the maximum value of the matrix A
+Input:	pointer to save the result
+	pointer to matrix A
+	size of the square matrices
+Output: EXIT_FAILURE; EXIT_SUCCESS*/
+{
+	int element, totalElem;
+	long double max;
+	
+	if(!*result || !A )
+	{
+		printf("Error in a matrix pointer\n");
+		return EXIT_FAILURE;
+	}
+	
+	totalElem = sizeMat * sizeMat;
+	max = 0;
+
+	#pragma omp parallel for shared(max)
+	for(element = 0; element < totalElem; element++)
+	{
+		if (*(A + element) > max)	
+			max = *(A + element);
+	}
+	*(*result) = max;
+	return EXIT_SUCCESS;
+}

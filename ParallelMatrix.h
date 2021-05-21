@@ -27,6 +27,8 @@ int matrixSum(long double**, long double*, long double*, int);
 
 int ompParallelmatrixMult(long double**, long double*, long double*, int);
 int matrixMult(long double**, long double*, long double*, int);
+int ompParallelmatrixMax(long double**, long double*, int);
+int matrixMax(long double**, long double*, int);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
