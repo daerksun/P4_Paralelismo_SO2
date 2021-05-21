@@ -160,18 +160,18 @@ int main(int argc, char** argv)
 	
 	tiempoMedido = (double)(t1.tv_sec - t0.tv_sec) + ((double)(t1.tv_nsec - t0.tv_nsec)/1000000000L);
 	printf("Tiempo transcurrido: %lf segundos\n",tiempoMedido);
-	printf("El valor máximo es %Lf\n\n", *C);
+	printf("El valor máximo es %Lf\n\n\n", *C);
 	tmaxP = tiempoMedido;
 	
 	//Extra
 
-	printf("|--------------------------------------------------|\n");
-	printf("|     Diferencia a favor del Proc. en Paralelo     |\n");
-	printf("|---------------|----------------------------------|\n");
-	printf("|  A * B        |   %f                       |\n", (tmul-tmulP));
-	printf("|---------------|----------------------------------|\n");
-	printf("|  Max(A)       |   %f                       |\n", (tmax-tmaxP));
-	printf("|---------------|----------------------------------|\n");
+	printf("     |--------------------------------------------------|\n");
+	printf("     |     Diferencia a favor del Proc. en Paralelo     |\n");
+	printf("     |---------------|----------------------------------|\n");
+	printf("     |  A * B        |   %f                       |\n", (tmul-tmulP));
+	printf("     |---------------|----------------------------------|\n");
+	printf("     |  Max(A)       |   %f                       |\n", (tmax-tmaxP));
+	printf("     |---------------|----------------------------------|\n");
 
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
